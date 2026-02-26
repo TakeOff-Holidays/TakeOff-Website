@@ -6,6 +6,9 @@ const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [introLoading, setIntroLoading] = useState(true);
     const [animationData, setAnimationData] = useState(null);
+    const [boxesVisible, setBoxesVisible] = useState(false);
+    const [mobileBoxesVisible, setMobileBoxesVisible] = useState(false);
+    const [tourPackagesVisible, setTourPackagesVisible] = useState(false);
     const introContainerRef = useRef(null);
 
     useEffect(() => {
@@ -52,6 +55,73 @@ const Home = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (!introLoading) {
+            const timer = setTimeout(() => {
+                setMobileBoxesVisible(true);
+            }, 150);
+            return () => clearTimeout(timer);
+        }
+    }, [introLoading]);
+
+    // Intersection Observer for glassmorphism boxes
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setBoxesVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
+            }
+        );
+
+        const targetElement = document.getElementById('glassmorphism-boxes');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Tour Packages section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTourPackagesVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
+            }
+        );
+
+        const targetElement = document.getElementById('tour-packages-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
     return (
         <div>
             {/* Intro Loading Overlay */}
@@ -70,68 +140,99 @@ const Home = () => {
             {/* Main Content */}
             <div style={{ display: introLoading ? 'none' : 'block' }}>
             {/* first section */}
-            <section className="relative w-screen h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/Home.jpg)'}}>
+            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.jpg)'}}>
                 {/* Top 4 small glassmorphism boxes */}
-                <div className="hidden md:block absolute left-0 right-0 px-8">
-                    <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-[40rem]">
-                        {/* Box 1 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 mr-24 md:mr-32 lg:mr-40 xl:mr-64">
+                <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-8">
+                    <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-32 md:gap-40 lg:gap-48 xl:gap-[48rem]">
+                        {/* Box 1 - 10,000+ Happy Travelers Served (from left) */}
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 mr-24 md:mr-32 lg:mr-40 xl:mr-64 transition-all duration-1000 ease-out ${
+                            boxesVisible 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 -translate-x-full'
+                        }`}>
                             <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
                             <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                         </div>
-                        {/* Box 2 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80">
+                        {/* Box 2 - 15+ Global Destinations Covered (from right) */}
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-300 ${
+                            boxesVisible 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 translate-x-full'
+                        }`}>
                             <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
                             <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                         </div>
                     </div>
                     <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48">
-                        {/* Box 3 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80">
+                        {/* Box 3 - 500+ Holiday Packages Delivered (from left) */}
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-150 ${
+                            boxesVisible 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 -translate-x-full'
+                        }`}>
                             <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
                             <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
                         </div>
-                        {/* Box 4 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80">
+                        {/* Box 4 - 19+ Years of Travel Excellence (from right) */}
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-450 ${
+                            boxesVisible 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 translate-x-full'
+                        }`}>
                             <p className="text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
                             <p className="text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
                         </div>
                     </div>
                 </div>
 
-                {/* Mobile-only vertical layout */}
+                {/* Mobile-only horizontal carousel */}
                 <div className="md:hidden absolute left-0 right-0 px-2 sm:px-4">
-                    <div className="absolute top-[80px] sm:top-[100px] left-0 right-0 flex flex-col items-center gap-2 sm:gap-3">
-                        {/* Box 1 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
-                            <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                            <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
-                        </div>
-                        {/* Box 2 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
-                            <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                            <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
-                        </div>
-                        {/* Box 3 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
-                            <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                            <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
-                        </div>
-                        {/* Box 4 */}
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
-                            <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                            <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                    <div className="absolute top-[80px] sm:top-[100px] left-0 right-0 overflow-hidden">
+                        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(currentIndex % 4) * 100}%)` }}>
+                            {/* Box 1 */}
+                            <div className="flex-shrink-0 w-full flex justify-center">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
+                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                                </div>
+                            </div>
+                            {/* Box 2 */}
+                            <div className="flex-shrink-0 w-full flex justify-center">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
+                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
+                                </div>
+                            </div>
+                            {/* Box 3 */}
+                            <div className="flex-shrink-0 w-full flex justify-center">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
+                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
+                                </div>
+                            </div>
+                            {/* Box 4 */}
+                            <div className="flex-shrink-0 w-full flex justify-center">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
+                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Mobile bottom boxes positioned below the 4 boxes */}
-                    <div className="absolute top-[450px] sm:top-[480px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5">
-                        {/* Mobile bottom left box */}
+                    {/* Mobile bottom, top box */}
+                    <div className={`absolute top-[200px] sm:top-[330px] md:top-[370px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
+                        mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.2s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-80">
                             <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Your Perfect Journey Starts Here</p>
                         </div>
+                    </div>
 
-                        {/* Mobile bottom right box */}
+                    {/* Mobile bottom, bottom box */}
+                    <div className={`absolute top-[580px] sm:top-[480px] md:top-[520px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 md:gap-8 mb-8 sm:mb-12 transition-all duration-1000 ease-out delay-600 ${
+                        mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.4s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-80">
                             <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
@@ -151,12 +252,20 @@ const Home = () => {
                 </div>
 
                 {/* Bottom left glassmorphism box */}
-                <div className="hidden md:block absolute bottom-8 left-32 md:left-36 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg">
+                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-600 ${
+                    boxesVisible 
+                        ? 'opacity-100 translate-x-0' 
+                        : 'opacity-0 -translate-x-full'
+                }`}>
                     <p className="font-bold font-pethra text-4xl md:text-4xl lg:text-5xl xl:text-6xl">Your Perfect Journey Starts Here</p>
                 </div>
 
                 {/* Bottom right glassmorphism box */}
-                <div className="hidden md:block absolute bottom-8 right-32 md:right-34 lg:right-38 xl:right-44 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 md:p-6 lg:p-7 xl:p-8 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg">
+                <div className={`hidden md:block absolute bottom-8 right-20 md:right-8 lg:right-38 xl:right-44 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 md:p-6 lg:p-7 xl:p-8 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-750 ${
+                    boxesVisible 
+                        ? 'opacity-100 translate-x-0' 
+                        : 'opacity-0 translate-x-full'
+                }`}>
                     <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-base md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                     <div className="flex gap-3 md:gap-3 lg:gap-4 xl:gap-5">
                         <button 
@@ -175,15 +284,21 @@ const Home = () => {
                             </section>
 
             {/* Tour Packages Section */}
-            <section className="w-full lg:px-24 xl:px-36 2xl:px-48 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-12">
+            <section id="tour-packages-section" className="w-full lg:px-24 xl:px-36 2xl:px-48 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-12">
                 {/* Header */}
-                <div className="flex justify-between items-start mb-12 flex-col sm:flex-row">
-                    <div className="mb-6 sm:mb-0">
+                <div className={`flex justify-between items-start mb-12 flex-col sm:flex-row transition-all duration-1000 ease-out delay-600 ${
+                    tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                }`} style={{transitionDelay: tourPackagesVisible ? '0.2s' : '0s'}}>
+                    <div className={`mb-6 sm:mb-0 transition-all duration-1000 ease-out delay-600 ${
+                        tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                    }`} style={{transitionDelay: tourPackagesVisible ? '0.3s' : '0s'}}>
                         <p className="text-base text-gray-500 mb-10 sm:mb-6 md:mb-8" style={{fontFamily: "'Afacad', sans-serif"}}>Tour Packages</p>
                         <h2 className="lg:text-5xl xl:text-6xl font-bold text-black font-pethra text-3xl sm:text-4xl md:text-5xl">Explore Our Best<br/>Travel Packages</h2>
                         <div className="w-24 h-1 bg-blue-600 mt-2 mx-auto"></div>
                     </div>
-                    <p className="text-gray-600 text-lg max-w-xs text-left sm:text-right text-sm sm:text-base md:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Handpicked holiday experiences<br/>designed for comfort, adventure,<br/>and unforgettable memories.</p>
+                    <p className={`text-gray-600 text-lg max-w-xs text-left sm:text-right text-sm sm:text-base md:text-lg transition-all duration-1000 ease-out delay-600 ${
+                        tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                    }`} style={{fontFamily: "'Afacad', sans-serif", transitionDelay: tourPackagesVisible ? '0.4s' : '0s'}}>Handpicked holiday experiences<br/>designed for comfort, adventure,<br/>and unforgettable memories.</p>
                 </div>
 
                 {/* Cards Container - Desktop/Tablet */}
