@@ -10,3 +10,13 @@
 .font-pethra {
   font-family: 'Pethra', sans-serif;
 }
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
