@@ -15,7 +15,7 @@ const Navbar = () => {
           {/* Center - Desktop Navigation Links in glassmorphism box */}
           <div className="hidden lg:flex bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-6 sm:px-8 md:px-12 py-2 sm:py-2.5 md:py-3 shadow-lg">
             <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-24">
-              <Link to="/" className="text-sm sm:text-base md:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/home" className="text-sm sm:text-base md:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
                 Home
               </Link>
               <Link to="/services" className="text-sm sm:text-base md:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className="lg:hidden bg-white/20 backdrop-blur-lg border-t border-white/20 shadow-lg">
           <div className="container mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-6">
             <div className="flex flex-col space-y-2 sm:space-y-4">
-              <Link to="/" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
+              <Link to="/home" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
               <Link to="/services" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>

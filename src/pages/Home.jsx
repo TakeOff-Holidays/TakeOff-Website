@@ -4,7 +4,6 @@ import lottie from 'lottie-web'
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [introLoading, setIntroLoading] = useState(true);
     const [animationData, setAnimationData] = useState(null);
     const [boxesVisible, setBoxesVisible] = useState(false);
     const [mobileBoxesVisible, setMobileBoxesVisible] = useState(false);
@@ -12,44 +11,6 @@ const Home = () => {
     const [serviceBoxVisible, setServiceBoxVisible] = useState(false);
     const [customizationVisible, setCustomizationVisible] = useState(false);
     const [adventureVisible, setAdventureVisible] = useState(false);
-    const introContainerRef = useRef(null);
-
-    useEffect(() => {
-        // Load flight-ticket animation for intro
-        fetch('/flight-ticket.json')
-            .then(response => response.text())
-            .then(text => {
-                try {
-                    const data = JSON.parse(text);
-                    setAnimationData(data);
-                } catch (error) {
-                    console.error('Error parsing flight-ticket JSON:', error);
-                }
-            })
-            .catch(error => console.error('Error loading flight-ticket animation:', error));
-    }, []);
-
-    useEffect(() => {
-        if (animationData && introContainerRef.current) {
-            const animation = lottie.loadAnimation({
-                container: introContainerRef.current,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                animationData: animationData
-            });
-
-            // Hide intro loading after animation completes (approximately 3 seconds)
-            const timer = setTimeout(() => {
-                setIntroLoading(false);
-            }, 3000);
-
-            return () => {
-                animation.destroy();
-                clearTimeout(timer);
-            };
-        }
-    }, [animationData]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -58,14 +19,13 @@ const Home = () => {
         return () => clearInterval(interval);
     }, []);
 
+    // Trigger mobile boxes animation
     useEffect(() => {
-        if (!introLoading) {
-            const timer = setTimeout(() => {
-                setMobileBoxesVisible(true);
-            }, 150);
-            return () => clearTimeout(timer);
-        }
-    }, [introLoading]);
+        const timer = setTimeout(() => {
+            setMobileBoxesVisible(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
 
     // Intersection Observer for glassmorphism boxes
     useEffect(() => {
@@ -214,21 +174,6 @@ const Home = () => {
 
     return (
         <div>
-            {/* Intro Loading Overlay */}
-            {introLoading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-                    <div className="flex flex-col items-center">
-                        <div 
-                            ref={introContainerRef} 
-                            className="w-48 h-48"
-                        />
-                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to TakeOff HolidayZ</p>
-                    </div>
-                </div>
-            )}
-            
-            {/* Main Content */}
-            <div style={{ display: introLoading ? 'none' : 'block' }}>
             {/* first section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.jpg)'}}>
                 {/* Top 4 small glassmorphism boxes */}
@@ -311,18 +256,18 @@ const Home = () => {
                     </div>
 
                     {/* Mobile bottom, top box */}
-                    <div className={`absolute top-[200px] sm:top-[330px] md:top-[370px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
+                    <div className={`absolute top-[230px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.2s' : '0s'}}>
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Your Perfect Journey Starts Here</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[580px] sm:top-[480px] md:top-[520px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 md:gap-8 mb-8 sm:mb-12 px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
+                    <div className={`absolute top-[70vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.4s' : '0s'}}>
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.7s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
@@ -923,7 +868,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            </div>
         </div>
     )
 }

@@ -10,6 +10,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Packages from './pages/Packages'
 import Application from './pages/Application'
+import LoadingPage from './pages/LoadingPage'
 
 const AppContent = () => {
     const [loading, setLoading] = useState(false);
@@ -24,12 +25,20 @@ const AppContent = () => {
         return () => clearTimeout(timer);
     }, [location.pathname]);
 
+    // Check if on loading page
+    const isLoadingPage = location.pathname === '/';
+
+    // If on loading page, show only LoadingPage without Navbar or Footer
+    if (isLoadingPage) {
+        return <LoadingPage />;
+    }
+
     return (
         <>
             {loading && <Loading />}
             <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/packages" element={<Packages />} />
