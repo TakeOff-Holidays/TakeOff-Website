@@ -132,7 +132,7 @@ const Home = () => {
                             ref={introContainerRef} 
                             className="w-48 h-48"
                         />
-                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to TakeOff HolidayZ</p>
+                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to Take-Off Holidays</p>
                     </div>
                 </div>
             )}
