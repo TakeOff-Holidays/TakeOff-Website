@@ -9,6 +9,9 @@ const Home = () => {
     const [boxesVisible, setBoxesVisible] = useState(false);
     const [mobileBoxesVisible, setMobileBoxesVisible] = useState(false);
     const [tourPackagesVisible, setTourPackagesVisible] = useState(false);
+    const [serviceBoxVisible, setServiceBoxVisible] = useState(false);
+    const [customizationVisible, setCustomizationVisible] = useState(false);
+    const [adventureVisible, setAdventureVisible] = useState(false);
     const introContainerRef = useRef(null);
 
     useEffect(() => {
@@ -122,6 +125,93 @@ const Home = () => {
         };
     }, []);
 
+    // Intersection Observer for Service Box section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setServiceBoxVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('service-box-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Customization section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setCustomizationVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('customization-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Adventure section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setAdventureVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('adventure-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
     return (
         <div>
             {/* Intro Loading Overlay */}
@@ -132,7 +222,7 @@ const Home = () => {
                             ref={introContainerRef} 
                             className="w-48 h-48"
                         />
-                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to Take-Off Holidays</p>
+                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to TakeOff HolidayZ</p>
                     </div>
                 </div>
             )}
@@ -190,29 +280,29 @@ const Home = () => {
                     <div className="absolute top-[80px] sm:top-[100px] left-0 right-0 overflow-hidden">
                         <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(currentIndex % 4) * 100}%)` }}>
                             {/* Box 1 */}
-                            <div className="flex-shrink-0 w-full flex justify-center">
-                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                            <div className="flex-shrink-0 w-full flex justify-center px-2">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
                                     <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
                                     <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                                 </div>
                             </div>
                             {/* Box 2 */}
-                            <div className="flex-shrink-0 w-full flex justify-center">
-                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                            <div className="flex-shrink-0 w-full flex justify-center px-2">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
                                     <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
                                     <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                                 </div>
                             </div>
                             {/* Box 3 */}
-                            <div className="flex-shrink-0 w-full flex justify-center">
-                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                            <div className="flex-shrink-0 w-full flex justify-center px-2">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
                                     <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
                                     <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
                                 </div>
                             </div>
                             {/* Box 4 */}
-                            <div className="flex-shrink-0 w-full flex justify-center">
-                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-52 sm:w-64">
+                            <div className="flex-shrink-0 w-full flex justify-center px-2">
+                                <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
                                     <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
                                     <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
                                 </div>
@@ -224,16 +314,16 @@ const Home = () => {
                     <div className={`absolute top-[200px] sm:top-[330px] md:top-[370px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.2s' : '0s'}}>
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-80">
+                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Your Perfect Journey Starts Here</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[580px] sm:top-[480px] md:top-[520px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 md:gap-8 mb-8 sm:mb-12 transition-all duration-1000 ease-out delay-600 ${
+                    <div className={`absolute top-[580px] sm:top-[480px] md:top-[520px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 md:gap-8 mb-8 sm:mb-12 px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.4s' : '0s'}}>
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-80">
+                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
                                 <button 
@@ -284,7 +374,7 @@ const Home = () => {
                             </section>
 
             {/* Tour Packages Section */}
-            <section id="tour-packages-section" className="w-full lg:px-24 xl:px-36 2xl:px-48 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-12">
+            <section id="tour-packages-section" className="w-full lg:px-32 xl:px-40 2xl:px-56 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-16 overflow-x-hidden">
                 {/* Header */}
                 <div className={`flex justify-between items-start mb-12 flex-col sm:flex-row transition-all duration-1000 ease-out delay-600 ${
                     tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
@@ -327,7 +417,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Spice plantation visits</li>
                                 </ul>
-                                <button className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 transition-all ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
@@ -354,7 +448,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Private beaches</li>
                                 </ul>
-                                <button className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 transition-all ${hoveredCard === 1 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 1 ? '' : 'hidden'}`} 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
@@ -381,12 +479,16 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Wine tasting tours</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Scenic train rides</li>
                                 </ul>
-                                <button className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 transition-all ${hoveredCard === 2 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 2 ? '' : 'hidden'}`} 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
                         {/* Thailand Card */}
-                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
+                        <div className={`hidden md:hidden lg:hidden xl:block bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
                             <div className="relative">
                                 <img src="/thailand.jpg" alt="Thailand" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`}/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
@@ -408,14 +510,18 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Street food experiences</li>
                                 </ul>
-                                <button className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 transition-all ${hoveredCard === 3 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 3 ? '' : 'hidden'}`} 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
                         {/* Next Navigation Box */}
-                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center">
+                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                             <button 
-                                className="text-gray-600 hover:text-blue-600 text-2xl md:text-3xl lg:text-4xl transition-all"
+                                className="text-gray-600 group-hover:text-blue-600 hover:scale-110 text-2xl md:text-3xl lg:text-4xl transition-all duration-300"
                                 onClick={() => window.location.href = '/packages'}
                             >
                                 &gt;
@@ -425,7 +531,7 @@ const Home = () => {
                 </div>
 
                 {/* Cards Container - Mobile */}
-                <div className="md:hidden overflow-hidden w-full">
+                <div className="md:hidden overflow-hidden w-full overflow-x-auto">
                     <div className="flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {/* Kerala Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -450,7 +556,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Spice plantation visits</li>
                                 </ul>
-                                <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 transition-all w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
@@ -477,7 +587,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Private beaches</li>
                                 </ul>
-                                <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 transition-all w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
@@ -504,7 +618,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Wine tasting tours</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Scenic train rides</li>
                                 </ul>
-                                <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 transition-all w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
 
@@ -531,7 +649,11 @@ const Home = () => {
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Street food experiences</li>
                                 </ul>
-                                <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 transition-all w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Booking</button>
+                                <button 
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/application'}
+                                >Booking</button>
                             </div>
                         </div>
                     </div>
@@ -539,7 +661,11 @@ const Home = () => {
 
                 {/* Explore More Packages Button */}
                 <div className="md:hidden mt-12 flex justify-center">
-                    <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 transition-all shadow-2xl" style={{fontFamily: "'Afacad', sans-serif", boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)'}}>Click to Explore More Packages</button>
+                    <button 
+                        className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 hover:scale-105 transition-all shadow-2xl" 
+                        style={{fontFamily: "'Afacad', sans-serif", boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)'}}
+                        onClick={() => window.location.href = '/packages'}
+                    >Click to Explore More Packages</button>
                 </div>
 
             </section>
@@ -548,12 +674,16 @@ const Home = () => {
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
             {/* Service Cards Section */}
-            <section className="py-20 bg-gray-50 py-12 sm:py-16 md:py-20">
-                <div className="container mx-auto px-4">
+            <section className="py-20 bg-gray-50 py-12 sm:py-16 md:py-20 overflow-x-hidden">
+                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44">
                     <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 sm:gap-10 md:gap-12">
                         {/* Left Section - Travel Made Effortless Box */}
                         <div className="lg:w-1/2 w-full">
-                            <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 mb-8 lg:mb-8">
+                            <div id="service-box-section" className={`bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 mb-8 lg:mb-8 transition-all duration-1000 ease-out ${
+                                serviceBoxVisible 
+                                    ? 'opacity-100 translate-y-0' 
+                                    : 'opacity-0 translate-y-16'
+                            }`}>
                                 <h2 className="font-bold text-gray-800 font-pethra text-center lg:text-left text-4xl sm:text-4xl md:text-4xl">Travel Made Effortless</h2>
                                 <p className="text-lg text-gray-600 text-center lg:text-left text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>
                                     From ticket bookings to luxury transfers, we handle every detail so you can focus on enjoying your journey.
@@ -561,7 +691,11 @@ const Home = () => {
                             </div>
                             
                             {/* Images and All Services Button */}
-                            <div className="grid grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8">
+                            <div className={`grid grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 transition-all duration-1000 ease-out delay-300 ${
+                                serviceBoxVisible 
+                                    ? 'opacity-100 translate-y-0' 
+                                    : 'opacity-0 translate-y-16'
+                            }`}>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
                                     <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center">
@@ -595,7 +729,11 @@ const Home = () => {
                         </div>
 
                         {/* Right Section - Service Cards */}
-                        <div className="lg:w-1/2 w-full">
+                        <div className={`lg:w-1/2 w-full transition-all duration-1000 ease-out delay-600 ${
+                            serviceBoxVisible 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 translate-x-16'
+                        }`}>
                             <h3 className="text-3xl font-bold text-black mb-8 font-pethra sm:text-4xl md:text-5xl">Service Cards</h3>
                             <div className="w-44 h-1 bg-blue-600 mt-2 mb-8 w-24 sm:w-32 md:w-44"></div>
                             
@@ -646,7 +784,11 @@ const Home = () => {
 
                         </div>
 
-                        <button className="bg-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-blue-700 transition-all duration-300 w-full lg:w-auto mt-8 sm:mt-12" style={{fontFamily: "'Afacad', sans-serif"}}>
+                        <button 
+                            className="bg-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 w-full lg:w-auto mt-8 sm:mt-12 shadow-lg hover:shadow-xl" 
+                            style={{fontFamily: "'Afacad', sans-serif"}}
+                            onClick={() => window.location.href = '/services'}
+                        >
                                 All Services....
                         </button>
 
@@ -661,9 +803,13 @@ const Home = () => {
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
             {/* Customization Section */}
-            <section className="py-20 bg-white py-12 sm:py-16 md:py-20">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12">
+            <section id="customization-section" className="py-20 bg-white py-12 sm:py-16 md:py-20 overflow-x-hidden">
+                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44">
+                    <div className={`flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ease-out ${
+                        customizationVisible 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-32'
+                    }`}>
                         {/* Left Section - Content */}
                         <div className="lg:w-1/2 w-full">
                             <p className="text-lg text-gray-500 mb-4 sm:mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>Highlight</p>
@@ -699,9 +845,9 @@ const Home = () => {
                                 </div>
                             </div>
                             <button 
-                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 transition-all duration-300 rounded-full shadow-lg" 
+                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl" 
                                 style={{fontFamily: "'Afacad', sans-serif"}}
-                                onClick={() => window.location.href = '/contact'}
+                                onClick={() => window.location.href = '/application'}
                             >
                                 Customize My Trip
                             </button>
@@ -721,11 +867,15 @@ const Home = () => {
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
             {/* Adventure Section */}
-            <section className="py-20 bg-white py-12 sm:py-16 md:py-20">
-                <div className="container mx-auto px-4">
+            <section id="adventure-section" className="py-20 bg-white py-12 sm:py-16 md:py-20 overflow-x-hidden">
+                <div className="container mx-auto px-4 max-w-full lg:px-8 xl:px-12">
                     <div className="flex justify-center">
                         {/* Right Section - Content */}
-                        <div className="lg:w-3/4 text-center w-full max-w-4xl">
+                        <div className={`lg:w-3/4 text-center w-full max-w-4xl transition-all duration-1000 ease-out ${
+                            adventureVisible 
+                                ? 'opacity-100 translate-y-0' 
+                                : 'opacity-0 translate-y-16'
+                        }`}>
                             <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Ready for Your Next Adventure?</h2>
                             <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44"></div>
                             <p className="text-gray-600 mb-8 sm:mb-10 md:mb-12 text-base sm:text-lg md:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>
@@ -733,8 +883,12 @@ const Home = () => {
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                                 {/* Left Contact Box */}
-                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
-                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
+                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-300 ${
+                                    adventureVisible 
+                                        ? 'opacity-100 translate-x-0' 
+                                        : 'opacity-0 -translate-x-16'
+                                }`}>
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Get expert advice for your next journey
                                     </p>
@@ -747,7 +901,11 @@ const Home = () => {
                                     </button>
                                 </div>
                                 {/* Right Contact Box */}
-                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-500 ${
+                                    adventureVisible 
+                                        ? 'opacity-100 translate-x-0' 
+                                        : 'opacity-0 translate-x-16'
+                                }`}>
                                     <h3 className="text-3xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-green-600 transition-colors duration-300">Customise Trips and Clear the Doubts</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Start planning your dream vacation
