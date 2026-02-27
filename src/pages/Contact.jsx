@@ -78,7 +78,13 @@ const Contact = () => {
             {/* Hero Image Box */}
             <section className="pt-24 pb-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28">
                 <div className="w-full">
-                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[200px] sm:h-[400px] md:h-[600px] lg:h-[900px] min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[900px] max-h-[900px] sm:max-h-[400px] md:max-h-[600px] lg:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
+                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[180px] sm:h-[350px] md:h-[500px] lg:h-[700px] min-h-[180px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[700px] max-h-[700px] sm:max-h-[350px] md:max-h-[500px] lg:max-h-[700px]" style={{backgroundImage: 'url(/contactus.jpg)'}}>
+                        <div className="absolute inset-0 bg-black/0 flex items-center justify-center px-4">
+                            <div className="absolute bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[60%] text-center transition-all duration-1000 ease-out opacity-100 translate-y-0">
+                                <h1 className="font-pethra mx-auto" style={{fontSize: 'clamp(3rem, 10vw, 150px)'}}>Contact Us</h1>
+                                <div className="w-[200px] sm:w-[300px] md:w-[380px] h-[2px] bg-white mx-auto mt-0"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
