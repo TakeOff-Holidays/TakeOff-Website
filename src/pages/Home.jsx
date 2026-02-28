@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import lottie from 'lottie-web'
+import CustomerReview from '../components/CustomerReview'
 
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -807,6 +808,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <CustomerReview />
 
             {/* Separator */}
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
