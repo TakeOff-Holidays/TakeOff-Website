@@ -5,6 +5,7 @@ const Application = () => {
         name: '',
         email: '',
         phone: '',
+        countryCode: '+91',
         services: '',
         message: '',
         remarks: ''
@@ -42,26 +43,21 @@ const Application = () => {
         setSubmitStatus('');
 
         try {
-            // Create email content
-            const emailContent = {
-                to: 'osspdm@gmail.com',
-                subject: `New Travel Application from ${formData.name}`,
-                body: `
-                    <h2>New Travel Application Received</h2>
-                    <p><strong>Name:</strong> ${formData.name}</p>
-                    <p><strong>Email:</strong> ${formData.email}</p>
-                    <p><strong>Phone:</strong> ${formData.phone}</p>
-                    <p><strong>Services we provide:</strong> ${formData.services}</p>
-                    <p><strong>Messages:</strong> ${formData.message}</p>
-                    <p><strong>Remarks:</strong> ${formData.remarks}</p>
-                    <hr>
-                    <p><em>Submitted on: ${new Date().toLocaleString()}</em></p>
-                `
-            };
+            // Create WhatsApp message content
+            const whatsappMessage = `*New Travel Application*
 
-            // Send email using mailto link (fallback option)
-            const mailtoLink = `mailto:${emailContent.to}?subject=${encodeURIComponent(emailContent.subject)}&body=${encodeURIComponent(emailContent.body.replace(/<[^>]*>/g, ''))}`;
-            window.location.href = mailtoLink;
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.countryCode} ${formData.phone}
+*Services:* ${formData.services}
+*Message:* ${formData.message}
+*Remarks:* ${formData.remarks}
+
+*Submitted on:* ${new Date().toLocaleString()}`;
+
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/918921318291?text=${encodeURIComponent(whatsappMessage)}`;
+            window.location.href = whatsappUrl;
 
             setSubmitStatus('success');
             
@@ -71,6 +67,7 @@ const Application = () => {
                     name: '',
                     email: '',
                     phone: '',
+                    countryCode: '+91',
                     services: '',
                     message: '',
                     remarks: ''
@@ -139,16 +136,41 @@ const Application = () => {
                                     <label htmlFor="phone" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Phone number *
                                     </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                        placeholder="+91 98765 43210"
-                                    />
+                                    <div className="flex gap-2">
+                                        <select
+                                            id="countryCode"
+                                            name="countryCode"
+                                            value={formData.countryCode}
+                                            onChange={handleChange}
+                                            className="px-3 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-24"
+                                        >
+                                            <option value="+1">+1</option>
+                                            <option value="+44">+44</option>
+                                            <option value="+91">+91</option>
+                                            <option value="+61">+61</option>
+                                            <option value="+81">+81</option>
+                                            <option value="+86">+86</option>
+                                            <option value="+49">+49</option>
+                                            <option value="+33">+33</option>
+                                            <option value="+39">+39</option>
+                                            <option value="+7">+7</option>
+                                            <option value="+55">+55</option>
+                                            <option value="+27">+27</option>
+                                            <option value="+971">+971</option>
+                                            <option value="+65">+65</option>
+                                            <option value="+82">+82</option>
+                                        </select>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
+                                            className="flex-1 px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                            placeholder="98765 43210"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>
@@ -238,7 +260,7 @@ const Application = () => {
                                 {submitStatus === 'success' && (
                                     <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
                                         <p className="text-green-700 text-center" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                            ✓ Application submitted successfully! Opening your email client...
+                                            ✓ Application submitted successfully! Redirecting to WhatsApp...
                                         </p>
                                     </div>
                                 )}

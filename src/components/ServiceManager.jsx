@@ -220,6 +220,35 @@ const ServiceManager = () => {
             title: "Airport Assistance",
             description: "Comprehensive airport assistance services for travelers, available worldwide."
         },
+    {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 0 28 24" id="helicopter">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7ECFFE"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+  <!-- Main rotor blades (horizontal on top) -->
+  <rect x="0" y="0" width="24" height="1" fill="url(#gradient)"/>
+  <rect x="11.5" y="0" width="1" height="3" fill="url(#gradient)"/>
+  <!-- Cockpit -->
+  <ellipse cx="12" cy="4" rx="4" ry="2" fill="url(#gradient)"/>
+  <!-- Main body -->
+  <rect x="8" y="6" width="8" height="3" fill="url(#gradient)" rx="1"/>
+  <!-- Landing skids -->
+  <rect x="7" y="9" width="10" height="0.5" fill="url(#gradient)"/>
+  <rect x="6" y="10" width="1" height="1" fill="url(#gradient)"/>
+  <rect x="17" y="10" width="1" height="1" fill="url(#gradient)"/>
+  <!-- Tail boom -->
+  <rect x="16" y="7" width="8" height="0.5" fill="url(#gradient)"/>
+  <!-- Tail fin -->
+  <rect x="21" y="5" width="2" height="4" fill="url(#gradient)"/>
+  <!-- Tail rotor (vertical) -->
+  <rect x="23" y="3" width="1" height="6" fill="url(#gradient)"/>
+</svg>`,
+            title: "Helicopter Services",
+            description: "Premium helicopter charter services for luxury travel, tours, and special events."
+        },
     ]);
 
     const [newService, setNewService] = useState({ icon: '', title: '', description: '' });

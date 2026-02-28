@@ -42,7 +42,7 @@ const ServiceBox = ({ icon, title, description }) => {
             }`}
         >
             <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="w-16 h-16 bg-white rounded-full flex justify-center mr-4 flex-shrink-0 pt-2">
                     {title === "Kerala Special Packages" ? (
                       <img src="./kerala-tourism.svg" className="w-8 h-8 object-cover" alt="Kerala" />
                     ) : title === "Corporate Travel & Events" ? (
@@ -61,6 +61,8 @@ const ServiceBox = ({ icon, title, description }) => {
                       <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
                     ) : title === "Airport Assistance" ? (
                       <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Helicopter Services" ? (
+                      <div className="w-12 h-12" dangerouslySetInnerHTML={{__html: icon}} />
                     ) : (
                       <svg className="w-8 h-8" fill="url(#gradient)" viewBox={title === "Schengen Visa Services" ? "0 0 640 576" : title === "Visa Stamping Support" ? "0 0 129 129" : title === "Document Attestation" ? "0 0 32 32" : title === "Travel Insurance" ? "0 0 64 64" : title === "Health Insurance" ? "0 0 1024 1024" : "0 0 24 24"}>
                         <defs>
