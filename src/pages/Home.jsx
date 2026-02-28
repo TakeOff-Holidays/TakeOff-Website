@@ -809,6 +809,8 @@ const Home = () => {
                 </div>
             </section>
 
+            <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
+
             <CustomerReview />
 
             {/* Separator */}
