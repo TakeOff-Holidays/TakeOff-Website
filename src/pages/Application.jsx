@@ -165,13 +165,17 @@ const Application = () => {
                                     >
                                         <option value="">Select a service</option>
                                         <option value="Flight Booking">Flight Booking</option>
-                                        <option value="Hotel Booking">Hotel Booking</option>
                                         <option value="Tour Packages">Tour Packages</option>
                                         <option value="Visa Assistance">Visa Assistance</option>
                                         <option value="Travel Insurance">Travel Insurance</option>
                                         <option value="Car Rental">Car Rental</option>
-                                        <option value="Cruise Booking">Cruise Booking</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Ticket Bookings">Ticket Bookings</option>
+                                        <option value="Holidays">Holidays</option>
+                                        <option value="Hotels & Resorts">Hotels & Resorts</option>
+                                        <option value="Cruise">Cruise Booking</option>
+                                        <option value="Events">Events</option>
+                                        <option value="Stamping & Attestation">Stamping & Attestation</option>
+                                        <option value="Others">Others</option>
                                     </select>
                                 </div>
 
