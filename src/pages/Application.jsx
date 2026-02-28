@@ -5,14 +5,9 @@ const Application = () => {
         name: '',
         email: '',
         phone: '',
-        package: '',
-        nights: '',
-        hotelCategory: '',
-        adults: '',
-        children: '',
-        childAge: '',
-        remarks: '',
-        message: ''
+        services: '',
+        message: '',
+        remarks: ''
     });
 
     const [typedText, setTypedText] = useState('');
@@ -56,14 +51,9 @@ const Application = () => {
                     <p><strong>Name:</strong> ${formData.name}</p>
                     <p><strong>Email:</strong> ${formData.email}</p>
                     <p><strong>Phone:</strong> ${formData.phone}</p>
-                    <p><strong>Package Type:</strong> ${formData.package}</p>
-                    <p><strong>Total Nights:</strong> ${formData.nights}</p>
-                    <p><strong>Hotel Category:</strong> ${formData.hotelCategory}</p>
-                    <p><strong>Adults:</strong> ${formData.adults}</p>
-                    <p><strong>Children:</strong> ${formData.children}</p>
-                    <p><strong>Child Ages:</strong> ${formData.childAge || 'N/A'}</p>
-                    <p><strong>Remarks:</strong> ${formData.remarks || 'N/A'}</p>
-                    <p><strong>Message:</strong> ${formData.message}</p>
+                    <p><strong>Services we provide:</strong> ${formData.services}</p>
+                    <p><strong>Messages:</strong> ${formData.message}</p>
+                    <p><strong>Remarks:</strong> ${formData.remarks}</p>
                     <hr>
                     <p><em>Submitted on: ${new Date().toLocaleString()}</em></p>
                 `
@@ -81,14 +71,9 @@ const Application = () => {
                     name: '',
                     email: '',
                     phone: '',
-                    package: '',
-                    nights: '',
-                    hotelCategory: '',
-                    adults: '',
-                    children: '',
-                    childAge: '',
-                    remarks: '',
-                    message: ''
+                    services: '',
+                    message: '',
+                    remarks: ''
                 });
                 setSubmitStatus('');
             }, 3000);
@@ -152,7 +137,7 @@ const Application = () => {
 
                                 <div>
                                     <label htmlFor="phone" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Enter your phone number *
+                                        Phone number *
                                     </label>
                                     <input
                                         type="tel"
@@ -167,185 +152,27 @@ const Application = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="package" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Package *
+                                    <label htmlFor="services" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Services we provide *
                                     </label>
                                     <select
-                                        id="package"
-                                        name="package"
-                                        value={formData.package}
+                                        id="services"
+                                        name="services"
+                                        value={formData.services}
                                         onChange={handleChange}
                                         required
                                         className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                     >
-                                        <option value="">Select a package type</option>
-                                        <option value="domestic">Domestic</option>
-                                        <option value="international">International</option>
+                                        <option value="">Select a service</option>
+                                        <option value="Flight Booking">Flight Booking</option>
+                                        <option value="Hotel Booking">Hotel Booking</option>
+                                        <option value="Tour Packages">Tour Packages</option>
+                                        <option value="Visa Assistance">Visa Assistance</option>
+                                        <option value="Travel Insurance">Travel Insurance</option>
+                                        <option value="Car Rental">Car Rental</option>
+                                        <option value="Cruise Booking">Cruise Booking</option>
+                                        <option value="Other">Other</option>
                                     </select>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="nights" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Total Nights *
-                                    </label>
-                                    <select
-                                        id="nights"
-                                        name="nights"
-                                        value={formData.nights}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    >
-                                        <option value="">Select number of nights</option>
-                                        <option value="1">1 Night</option>
-                                        <option value="2">2 Nights</option>
-                                        <option value="3">3 Nights</option>
-                                        <option value="4">4 Nights</option>
-                                        <option value="5">5 Nights</option>
-                                        <option value="6">6 Nights</option>
-                                        <option value="7">7 Nights</option>
-                                        <option value="8">8 Nights</option>
-                                        <option value="9">9 Nights</option>
-                                        <option value="10">10 Nights</option>
-                                        <option value="11">11 Nights</option>
-                                        <option value="12">12 Nights</option>
-                                        <option value="13">13 Nights</option>
-                                        <option value="14">14 Nights</option>
-                                        <option value="15">15+ Nights</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Hotel Category *
-                                    </label>
-                                    <div className="space-y-2">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="hotelCategory"
-                                                value="3-star"
-                                                checked={formData.hotelCategory === '3-star'}
-                                                onChange={handleChange}
-                                                required
-                                                className="mr-2 text-blue-600 focus:ring-blue-500"
-                                            />
-                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>3 Stars</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="hotelCategory"
-                                                value="4-star"
-                                                checked={formData.hotelCategory === '4-star'}
-                                                onChange={handleChange}
-                                                required
-                                                className="mr-2 text-blue-600 focus:ring-blue-500"
-                                            />
-                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>4 Stars</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="hotelCategory"
-                                                value="5-star"
-                                                checked={formData.hotelCategory === '5-star'}
-                                                onChange={handleChange}
-                                                required
-                                                className="mr-2 text-blue-600 focus:ring-blue-500"
-                                            />
-                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>5 Stars</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="hotelCategory"
-                                                value="budget"
-                                                checked={formData.hotelCategory === 'budget'}
-                                                onChange={handleChange}
-                                                required
-                                                className="mr-2 text-blue-600 focus:ring-blue-500"
-                                            />
-                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>Budget</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="hotelCategory"
-                                                value="other"
-                                                checked={formData.hotelCategory === 'other'}
-                                                onChange={handleChange}
-                                                required
-                                                className="mr-2 text-blue-600 focus:ring-blue-500"
-                                            />
-                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>Other</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label htmlFor="adults" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                            Total Adults *
-                                        </label>
-                                        <input
-                                            type="number"
-                                            id="adults"
-                                            name="adults"
-                                            value={formData.adults}
-                                            onChange={handleChange}
-                                            required
-                                            min="1"
-                                            className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                            placeholder="0"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="children" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                            Total Children *
-                                        </label>
-                                        <input
-                                            type="number"
-                                            id="children"
-                                            name="children"
-                                            value={formData.children}
-                                            onChange={handleChange}
-                                            required
-                                            min="0"
-                                            className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                            placeholder="0"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="childAge" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Child Age *
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="childAge"
-                                        name="childAge"
-                                        value={formData.childAge}
-                                        onChange={handleChange}
-                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                        placeholder="e.g., 5, 8, 12"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="remarks" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Remarks
-                                    </label>
-                                    <textarea
-                                        id="remarks"
-                                        name="remarks"
-                                        value={formData.remarks}
-                                        onChange={handleChange}
-                                        rows="3"
-                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                                        placeholder="Any special requirements or preferences..."
-                                    ></textarea>
                                 </div>
 
                                 <div>
@@ -361,6 +188,21 @@ const Application = () => {
                                         rows="4"
                                         className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                                         placeholder="Tell us more about your travel plans..."
+                                    ></textarea>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="remarks" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Remarks
+                                    </label>
+                                    <textarea
+                                        id="remarks"
+                                        name="remarks"
+                                        value={formData.remarks}
+                                        onChange={handleChange}
+                                        rows="3"
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                        placeholder="Any special requirements or preferences..."
                                     ></textarea>
                                 </div>
 
