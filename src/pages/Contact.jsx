@@ -108,46 +108,72 @@ const Contact = () => {
                                     </p>
                                 </div>
 
-                                {/* Contact materials */}
-                                <div id="contact-materials" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
-                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 ${
+                                {/* Office Address Box - Full Width */}
+                                <div id="contact-materials" className="mb-6 px-4">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer ${
                                         materialsVisible 
                                             ? 'opacity-100 transform scale-100' 
                                             : 'opacity-0 transform scale-50'
                                     }`}>
-                                        <div className="flex flex-col items-center text-center space-y-3">
-                                            <div className="bg-blue-100 text-blue-600 rounded-full p-2 sm:p-3 flex-shrink-0">
-                                                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div className="text-center space-y-4">
+                                            <div className="bg-blue-100 text-blue-600 rounded-full p-3 sm:p-4 inline-flex hover:bg-blue-200 hover:rotate-12 transition-all duration-300">
+                                                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Office Address</h4>
-                                                <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                    DD VYAPAR BHAVAN<br />
-                                                    KP VALLON ROAD<br />
-                                                    KADAVANTHARA, KOCHI - 682020<br />
-                                                    Kerala,India
-                                                </p>
+                                                <h4 className="font-semibold text-gray-900 mb-4 text-xl sm:text-2xl hover:text-blue-700 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>Office Addresses</h4>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                    <div className="hover:bg-white hover:rounded-lg hover:p-4 hover:shadow-md transition-all duration-300 -m-4 p-4">
+                                                        <h5 className="font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors duration-300">Main Office</h5>
+                                                        <p className="hover:text-gray-800 transition-colors duration-300">
+                                                            DD VYAPAR BHAVAN<br />
+                                                            KP VALLON ROAD<br />
+                                                            KADAVANTHARA, KOCHI - 682020<br />
+                                                            KERALA, INDIA
+                                                        </p>
+                                                    </div>
+                                                    <div className="hover:bg-white hover:rounded-lg hover:p-4 hover:shadow-md transition-all duration-300 -m-4 p-4">
+                                                        <h5 className="font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors duration-300">Branch Office 1</h5>
+                                                        <p className="hover:text-gray-800 transition-colors duration-300">
+                                                            ALHAM BUILDING<br />
+                                                            MANGARAM, MUTTAR<br />
+                                                            PANDALAM, PATHANAMTHITTA -689501<br />
+                                                            KERALA, INDIA
+                                                        </p>
+                                                    </div>
+                                                    <div className="hover:bg-white hover:rounded-lg hover:p-4 hover:shadow-md transition-all duration-300 -m-4 p-4">
+                                                        <h5 className="font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors duration-300">Branch Office 2</h5>
+                                                        <p className="hover:text-gray-800 transition-colors duration-300">
+                                                            106, LISTER COURT A <br />
+                                                            NIGHTINGALE AVENUE <br />
+                                                            HARROW, MIDDLESEX<br />
+                                                            UNITED KINGDOM , PO- HA1 3GJ
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-100 ${
+                                {/* Other Contact Information */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer ${
                                         materialsVisible 
                                             ? 'opacity-100 transform scale-100' 
                                             : 'opacity-0 transform scale-50'
                                     }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
-                                            <div className="bg-green-100 text-green-600 rounded-full p-2 sm:p-3 flex-shrink-0">
+                                            <div className="bg-green-100 text-green-600 rounded-full p-2 sm:p-3 flex-shrink-0 hover:bg-green-200 hover:rotate-12 transition-all duration-300">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Phone Numbers</h4>
-                                                <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg hover:text-green-700 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>Phone Numbers</h4>
+                                                <p className="text-gray-600 text-sm sm:text-base hover:text-gray-800 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>
                                                     +91 812 902 3279 (WHATSAPP)<br />
                                                     +91 977 878 3291<br />
                                                     +91 859 078 3291<br />
@@ -157,40 +183,40 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-200 ${
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer ${
                                         materialsVisible 
                                             ? 'opacity-100 transform scale-100' 
                                             : 'opacity-0 transform scale-50'
                                     }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
-                                            <div className="bg-purple-100 text-purple-600 rounded-full p-2 sm:p-3 flex-shrink-0">
+                                            <div className="bg-purple-100 text-purple-600 rounded-full p-2 sm:p-3 flex-shrink-0 hover:bg-purple-200 hover:rotate-12 transition-all duration-300">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Email Address</h4>
-                                                <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg hover:text-purple-700 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>Email Address</h4>
+                                                <p className="text-gray-600 text-sm sm:text-base hover:text-gray-800 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>
                                                     support.cok@takeoffholidayz.in<br />
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-300 ${
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer ${
                                         materialsVisible 
                                             ? 'opacity-100 transform scale-100' 
                                             : 'opacity-0 transform scale-50'
                                     }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
-                                            <div className="bg-orange-100 text-orange-600 rounded-full p-2 sm:p-3 flex-shrink-0">
+                                            <div className="bg-orange-100 text-orange-600 rounded-full p-2 sm:p-3 flex-shrink-0 hover:bg-orange-200 hover:rotate-12 transition-all duration-300">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Business Hours</h4>
-                                                <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg hover:text-orange-700 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>Business Hours</h4>
+                                                <p className="text-gray-600 text-sm sm:text-base hover:text-gray-800 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>
                                                     Monday - Friday: 9:00 AM - 6:00 PM<br />
                                                     Saturday: 9:00 AM - 6:00 PM<br />
                                                     Sunday: Closed ( Can contact through WhatsApp or Call)
@@ -219,7 +245,7 @@ const Contact = () => {
                                                 Visit Our Office
                                             </h4>
                                             <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                123 Travel Street, Kochi, Kerala 682001, India
+                                                DD VYAPAR BHAVAN, KP VALLON ROAD, KADAVANTHRA, KOCHI - 682 020
                                             </p>
                                             <a 
                                                 href="https://maps.app.goo.gl/e8Xq23jT8yuk9gtg9" 
