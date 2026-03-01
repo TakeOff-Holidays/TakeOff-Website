@@ -8,8 +8,8 @@ const Navbar = () => {
       <div className="container mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
           {/* Left - Logo in glassmorphism box */}
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 shadow-lg">
-            <img src="/logo.png" alt="Logo" className="h-8 w-auto sm:h-9 md:h-10" />
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg">
+            <img src="/logoimg.png" alt="Logo" className="h-12 w-auto sm:h-14 md:h-16" />
           </div>
 
           {/* Center - Desktop Navigation Links in glassmorphism box */}

@@ -106,6 +106,42 @@ const InternationalPackages = [
             "Comfortable accommodation",
             "Travel support included"
         ]
+    },
+    {
+        id: 10,
+        title: "Nepal Himalayan Adventure",
+        price: "₹15,999",
+        image: "/Nepalimg.jpg",
+        description: "Experience majestic Himalayan peaks, ancient temples, and vibrant Kathmandu culture.",
+        features: [
+            "Mountain trekking",
+            "Cultural heritage tours",
+            "Scenic flight experiences"
+        ]
+    },
+    {
+        id: 11,
+        title: "Bhutan Kingdom Journey",
+        price: "₹22,999",
+        image: "/bhutanimg.jpg",
+        description: "Discover the Land of Thunder Dragon with monasteries, fortresses, and pristine landscapes.",
+        features: [
+            "Monastery visits",
+            "Mountain valley tours",
+            "Cultural immersion"
+        ]
+    },
+    {
+        id: 12,
+        title: "China Ancient Wonders",
+        price: "₹24,999",
+        image: "/chinaimg.jpg",
+        description: "Explore the Great Wall, Forbidden City, and blend of ancient tradition with modern marvels.",
+        features: [
+            "Historical landmarks",
+            "City tours",
+            "Cultural experiences"
+        ]
     }
 ];
 

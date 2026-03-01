@@ -82,6 +82,18 @@ const DomesticPackages = [
             "Beachside stay",
             "Water experiences included"
         ]
+    },
+    {
+        id: 8,
+        title: "Sri Lanka Island Paradise",
+        price: "₹13,999",
+        image: "/srilankaimg.jpg",
+        description: "Explore tropical beaches, ancient cities, and lush tea plantations in beautiful Sri Lanka.",
+        features: [
+            "Beach resort stay",
+            "Cultural heritage tours",
+            "Tea plantation visits"
+        ]
     }
 ];
 

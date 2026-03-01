@@ -62,52 +62,52 @@ const CustomerReview = () => {
 
     const reviews = [
         {
-            initial: 'S',
-            name: 'Sarah Johnson',
+            initial: 'B',
+            name: 'Balasaheb Bhaga',
             rating: 5,
-            comment: "Amazing service! The team helped plan our dream vacation perfectly. Highly recommend!"
+            comment: "Completely trustworthy. Dealing with him just over whats app. Have been getting mine and all family visas for UAE for past 3 years from him. No even single hiccups."
         },
         {
-            initial: 'M',
-            name: 'Michael Chen',
+            initial: 'S',
+            name: 'Sara Boban',
             rating: 5,
-            comment: "Excellent customer support and great package deals. Our trip was unforgettable."
+            comment: "the service was smooth and stress free. I’m very satisfied and would definitely recommend Takeoff Holidays to anyone looking for reliable travel assistance."
+        },
+        {
+            initial: 'L',
+            name: 'lipin lg',
+            rating: 5,
+            comment: "I had an amazing experience with Mr.Shibin at Takeoff Holidays.They crafted a perfect itinerary, handled all bookings seamlessly, and stayed in constant communication. Even a minor issue during the trip was resolved quickly and professionally. Their attention to detail and care made my vacation stress-free and unforgettable. Highly recommend for anyone seeking top-notch travel service!"
+        },
+        {
+            initial: 'S',
+            name: 'Susanth alappatt john',
+            rating: 5,
+            comment: "I used to book tickets through this agency and I’m so pleased with entire experience. From start to finish Mr. Shibin went above and beyond to ensure that every aspects of my trip was seamless and stress free. I highly recommend Take off holidays for anyone to book a trip."
         },
         {
             initial: 'P',
-            name: 'Priya Sharma',
+            name: 'preethu pradeep',
             rating: 5,
-            comment: "Professional and reliable. Made our international travel hassle-free."
-        },
-        {
-            initial: 'J',
-            name: 'James Wilson',
-            rating: 5,
-            comment: "Best travel agency I've ever used! They took care of everything from start to finish."
-        },
-        {
-            initial: 'A',
-            name: 'Amanda Lee',
-            rating: 5,
-            comment: "Outstanding experience! The team went above and beyond to make our trip memorable."
+            comment: "Good service. One of the best travel agency i can suggest, will get the response immediately .i am completely impressed with their professionalism and customer service, especially Shibin bro is extremely helpful. Highly recommend this agency to all."
         },
         {
             initial: 'R',
-            name: 'Robert Brown',
+            name: 'Gg Bb',
             rating: 5,
-            comment: "Great value for money! The packages were well-organized and exceeded our expectations."
+            comment: "Booked thailand package for 4 days. It was a great experience. No hidden charges. All rates were mentioned clearly. Shibin was available at anytime to clarify any questions.\nIn Thailand all travel was taken care as part of package. Hotel which was given was very nice.\n\nOverall a good reliable agency .thank you."
         },
         {
             initial: 'E',
-            name: 'Emily Davis',
+            name: 'the Don',
             rating: 5,
-            comment: "Exceptional service! The staff was knowledgeable and helped us choose the perfect destinations."
+            comment: "My priority travel agency....Very knowledgeable team....Quick response, suitable recommendations and budgetary offers..  One stop for all my travel needs....Highly recommendable.....Well Done Take Off .... Keep it up."
         },
         {
             initial: 'D',
-            name: 'David Martinez',
+            name: 'manu ghosh',
             rating: 5,
-            comment: "Wonderful experience from booking to return! Will definitely use their services again."
+            comment: "Takeoff made my travel planning effortless and enjoyable. Highly knowledgeable and attentive, they tailored everything to my preferences perfectly. Highly recommend for a stress-free and memorable trip.\n\nThank you!"
         }
     ];
 
