@@ -104,8 +104,9 @@ const LoadingPage = () => {
 
             {/* Decorative elements */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/50 to-transparent flex items-center justify-center">
-                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 shadow-lg">
-                    <img src="/logo.png" alt="TakeOff HolidayZ Logo" className="h-12 w-auto" />
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center gap-2 sm:gap-3">
+                    <img src="/logoimg.png" alt="TakeOff HolidayZ Logo" className="h-12 w-auto" />
+                    <span className="text-black text-sm sm:text-base md:text-lg font-bold hidden sm:inline" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
                 </div>
             </div>
         </div>
