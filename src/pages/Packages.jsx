@@ -106,7 +106,7 @@ const Packages = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: backgroundImageLoaded ? 'url(/packages.jpg)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
+            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: backgroundImageLoaded ? 'url(/packages.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4">
                     <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 text-white max-w-7xl w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] text-center transition-all duration-1000 ease-out ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

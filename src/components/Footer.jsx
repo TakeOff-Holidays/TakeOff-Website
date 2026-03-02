@@ -93,8 +93,7 @@ const Footer = () => {
           <div className="text-center mb-4">
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center justify-center gap-2">
-                <img src="/isomark.png" alt="Takeoff Holidayz Isomark" className="h-8 w-auto" />
-                <span className="text-gray-300 text-sm font-semibold" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
+                <img src="/isomark.png" alt="Takeoff Holidayz Isomark" className="h-20 w-auto" />
               </div>
               <span className="text-gray-400 text-xs" style={{fontFamily: "'Afacad', sans-serif"}}>ISO Certified 9001:2025</span>
             </div>
