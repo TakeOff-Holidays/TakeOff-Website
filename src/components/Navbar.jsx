@@ -10,8 +10,23 @@ const Navbar = () => {
           {/* Left - Logo in glassmorphism box */}
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center gap-2 sm:gap-3">
             <img src="/logoimg.png" alt="Logo" className="h-12 w-auto sm:h-14 md:h-12" />
-            <span className="text-black text-sm sm:text-base md:text-lg font-bold" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
+            <div className="flex flex-col leading-tight">
+            <span 
+            className="text-black text-sm sm:text-base md:text-lg font-bold"
+            style={{ fontFamily: "'Afacad', sans-serif" }}
+            >
+             Takeoff Holidayz
+            </span>
+
+           <span 
+           className="text-xs sm:text-sm font-medium"
+           style={{ color: "#148dc4" }}
+           >
+           A Complete Travel Partner
+          </span>
           </div>
+
+        </div>
 
           {/* Center - Desktop Navigation Links in glassmorphism box */}
           <div className="hidden lg:flex bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-6 sm:px-8 md:px-12 py-2 sm:py-2.5 md:py-3 shadow-lg">
