@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import lottie from 'lottie-web'
-import CustomerReview from '../components/CustomerReview'
+const CustomerReview = lazy(() => import('../components/CustomerReview'))
 
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -496,7 +496,7 @@ const Home = () => {
                         {/* Kerala Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/kerala.webp" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/kerala.webp" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     South Asia
@@ -527,7 +527,7 @@ const Home = () => {
                         {/* Maldives Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/maldives.webp" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/maldives.webp" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Indian Ocean
@@ -558,7 +558,7 @@ const Home = () => {
                         {/* Europe Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/dubai.webp" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/dubai.webp" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Middle East
@@ -589,7 +589,7 @@ const Home = () => {
                         {/* Thailand Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/thailand.webp" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/thailand.webp" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Southeast Asia
@@ -657,7 +657,7 @@ const Home = () => {
                                     : 'opacity-0 translate-y-16'
                             }`}>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
-                                    <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" />
+                                    <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy"/>
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="text-center">
                                             <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
@@ -670,7 +670,7 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
-                                    <img src="/service2.jpg" alt="Airplane Wing" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" />
+                                    <img src="/service2.jpg" alt="Airplane Wing" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy"/>
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="text-center">
                                             <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
@@ -816,7 +816,7 @@ const Home = () => {
                         {/* Right Section - Image */}
                         <div className="lg:w-1/2 w-full">
                             <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                                <img src="/customize.jpg" alt="Customization" className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover" />
+                                <img src="/customize.jpg" alt="Customization" className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover" loading="lazy"/>
                             </div>
                         </div>
                     </div>
@@ -825,7 +825,7 @@ const Home = () => {
 
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
-            <CustomerReview />
+            <Suspense fallback={<div className="flex justify-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}><CustomerReview /></Suspense>
 
             {/* Separator */}
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>

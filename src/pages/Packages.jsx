@@ -162,6 +162,7 @@ const Packages = () => {
                                     src={pkg.image} 
                                     alt={pkg.title} 
                                     className="object-cover rounded-xl sm:rounded-2xl m-2 sm:m-4 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] h-48 sm:h-56 md:h-64 transition-transform duration-300 group-hover:scale-108"
+                                    loading="lazy"
                                     onError={(e) => {
                                         e.target.src = '/placeholder-package.jpg';
                                     }}
