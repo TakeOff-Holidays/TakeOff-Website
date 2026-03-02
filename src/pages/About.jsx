@@ -7,6 +7,7 @@ const About = () => {
     const [commitmentVisible, setCommitmentVisible] = useState(false);
     const [imageVisible, setImageVisible] = useState(false);
     const [journeyTextVisible, setJourneyTextVisible] = useState(false);
+    const [founderNoteVisible, setFounderNoteVisible] = useState(false);
     const [displayedText, setDisplayedText] = useState('');
     
     const whatWeDoRef = useRef(null);
@@ -14,6 +15,7 @@ const About = () => {
     const commitmentRef = useRef(null);
     const imageRef = useRef(null);
     const journeyRef = useRef(null);
+    const founderNoteRef = useRef(null);
     
     const journeyText = "We turn every journey into a smooth, joyful experience — where comfort meets adventure and every trip becomes a story filled with beautiful memories.";
     
@@ -37,6 +39,8 @@ const About = () => {
                             setImageVisible(true);
                         } else if (entry.target === journeyRef.current) {
                             setJourneyTextVisible(true);
+                        } else if (entry.target === founderNoteRef.current) {
+                            setFounderNoteVisible(true);
                         }
                     }
                 });
@@ -62,6 +66,9 @@ const About = () => {
         if (journeyRef.current) {
             observer.observe(journeyRef.current);
         }
+        if (founderNoteRef.current) {
+            observer.observe(founderNoteRef.current);
+        }
         
         return () => {
             clearTimeout(timer);
@@ -70,6 +77,7 @@ const About = () => {
             if (commitmentRef.current) observer.unobserve(commitmentRef.current);
             if (imageRef.current) observer.unobserve(imageRef.current);
             if (journeyRef.current) observer.unobserve(journeyRef.current);
+            if (founderNoteRef.current) observer.unobserve(founderNoteRef.current);
         };
     }, []);
     
@@ -250,7 +258,9 @@ const About = () => {
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
             {/* Founder Note Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-white">
+            <section ref={founderNoteRef} className={`py-12 sm:py-16 md:py-20 bg-white transition-all duration-1000 ease-out ${
+                founderNoteVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            }`}>
                 <div className="container mx-auto px-4 sm:px-6">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>Founder's Note</h2>
@@ -260,7 +270,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="/founder.jpg" alt="Founder" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
+                                <img src="/founder.jpg" alt="Founder of TakeOff Holidays" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
                             </div>
                         </div>
 
