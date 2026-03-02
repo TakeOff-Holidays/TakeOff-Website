@@ -3,7 +3,7 @@ const InternationalPackages = [
         id: 1,
         title: "Dubai Luxury E",
         price: "₹18,999",
-        image: "/dubai.jpg",
+        image: "/dubai.webp",
         description: "Experience luxury, skyscrapers, desert safaris, and world-class shopping.",
         features: [
             "City & desert experiences",
@@ -15,7 +15,7 @@ const InternationalPackages = [
         id: 2,
         title: "Thailand Tropical Getaway",
         price: "₹14,999",
-        image: "/thailand.jpg",
+        image: "/thailand.webp",
         description: "Enjoy stunning beaches, vibrant nightlife, temples, and island adventures.",
         features: [
             "Island sightseeing",
@@ -27,7 +27,7 @@ const InternationalPackages = [
         id: 3,
         title: "Bali Island Retreat",
         price: "₹18,999",
-        image: "/bali.jpg",
+        image: "/bali.webp",
         description: "Relax with tropical beaches, rice terraces, and peaceful temple vibes.",
         features: [
             "Cultural exploration",
@@ -39,7 +39,7 @@ const InternationalPackages = [
         id: 4,
         title: "Vietnam Discovery Tour",
         price: "₹19,999",
-        image: "/vietnam.jpg",
+        image: "/vietnam.webp",
         description: "Discover scenic bays, cultural towns, and breathtaking landscapes.",
         features: [
             "Heritage sightseeing",
@@ -51,7 +51,7 @@ const InternationalPackages = [
         id: 5,
         title: "Maldives Paradise Escape",
         price: "₹22,000",
-        image: "/maldives.jpg",
+        image: "/maldives.webp",
         description: "Unwind in crystal-clear waters, luxury water villas, and romantic island views.",
         features: [
             "Beachside luxury stay",
@@ -63,7 +63,7 @@ const InternationalPackages = [
         id: 6,
         title: "Singapore Urban Adventure",
         price: "₹28,999",
-        image: "/singapore.jpg",
+        image: "/singapore.webp",
         description: "Explore the best of Europe with visits to Paris, Rome, and Barcelona.",
         features: [
             "Modern city sightseeing",

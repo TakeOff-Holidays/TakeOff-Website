@@ -3,7 +3,7 @@ const DomesticPackages = [
         id: 1,
         title: "Kerala Scenic Escape",
         price: "₹8,999",
-        image: "/kerala.jpg",
+        image: "/kerala.webp",
         description: "Experience the serene backwaters of Kerala with houseboat stays and traditional cuisine.",
         features: [
             "Premium accommodation",
@@ -15,7 +15,7 @@ const DomesticPackages = [
         id: 2,
         title: "Delhi Heritage Tour",
         price: "₹9,999",
-        image: "/delhi.jpg",
+        image: "/delhi.webp",
         description: "Explore India’s capital with historic landmarks, vibrant markets, and delicious street food.",
         features: [
             "Heritage sightseeing",
@@ -27,7 +27,7 @@ const DomesticPackages = [
         id: 3,
         title: "Kashmir Paradise Escape",
         price: "₹9,999",
-        image: "/kashmir.jpg",
+        image: "/kashmir.webp",
         description: "Experience snow peaks, serene lakes, and breathtaking valley views.",
         features: [
             "Scenic valley tours",
@@ -39,7 +39,7 @@ const DomesticPackages = [
         id: 4,
         title: "Manali Mountain Retreat",
         price: "₹8,999",
-        image: "/manali.jpg",
+        image: "/manali.webp",
         description: "Enjoy cool mountain vibes, adventure sports, and scenic beauty.",
         features: [
             "Mountain sightseeing",
@@ -51,7 +51,7 @@ const DomesticPackages = [
         id: 5,
         title: "Nepal Himalayan Journey",
         price: "₹12,999",
-        image: "/nepal.jpg",
+        image: "/nepal.webp",
         description: "Discover Himalayan views, temples, and rich cultural heritage.",
         features: [
             "Cultural exploration",
@@ -63,7 +63,7 @@ const DomesticPackages = [
         id: 6,
         title: "Hyderabad City Explorer",
         price: "₹8,999",
-        image: "/hyderabad.jpg",
+        image: "/hyderabad.webp",
         description: "Explore royal monuments, city life, and famous Hyderabadi biryani.",
         features: [
             "Historic city sightseeing",
@@ -75,7 +75,7 @@ const DomesticPackages = [
         id: 7,
         title: "Lakshadweep Island Escape",
         price: "₹9,999",
-        image: "/lakshadweep.jpg",
+        image: "/lakshadweep.webp",
         description: "Relax on white beaches with crystal-clear waters and coral reefs.",
         features: [
             "Island sightseeing",
@@ -87,7 +87,7 @@ const DomesticPackages = [
         id: 8,
         title: "Sri Lanka Island Paradise",
         price: "₹13,999",
-        image: "/srilankaimg.jpg",
+        image: "/srilankaimg.webp",
         description: "Explore tropical beaches, ancient cities, and lush tea plantations in beautiful Sri Lanka.",
         features: [
             "Beach resort stay",

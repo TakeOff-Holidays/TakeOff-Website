@@ -357,7 +357,7 @@ const Home = () => {
                         {/* Kerala Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 0 || hoveredCard === null ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(0)}>
                             <div className="relative">
-                                <img src="/kerala.jpg" alt="Kerala" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 0 || hoveredCard === null ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`}/>
+                                <img src="/kerala.webp" alt="Kerala" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 0 || hoveredCard === null ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     South Asia
@@ -371,7 +371,7 @@ const Home = () => {
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹24,999</p>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹8,999</p>
                                 <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Backwater cruises</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
@@ -388,7 +388,7 @@ const Home = () => {
                         {/* Maldives Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 1 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(1)}>
                             <div className="relative">
-                                <img src="/maldives.jpg" alt="Maldives" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 1 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`}/>
+                                <img src="/maldives.webp" alt="Maldives" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 1 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Indian Ocean
@@ -402,7 +402,7 @@ const Home = () => {
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹22,000</p>
                                 <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 1 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Overwater villas</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
@@ -416,28 +416,28 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Europe Card */}
+                        {/* Dubai Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 2 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(2)}>
                             <div className="relative">
-                                <img src="/europe.jpg" alt="Europe" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 2 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`}/>
+                                <img src="/dubai.webp" alt="Dubai" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 2 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
-                                    Europe
+                                    Middle East
                                 </div>
                             </div>
                             <div className="p-8 pt-2">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Europe</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Dubai</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹47,999</p>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
                                 <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 2 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Historical monuments</li>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Wine tasting tours</li>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Scenic train rides</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Burj Khalifa experience</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Desert safari tours</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Luxury shopping malls</li>
                                 </ul>
                                 <button 
                                     className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 2 ? '' : 'hidden'}`} 
@@ -450,7 +450,7 @@ const Home = () => {
                         {/* Thailand Card */}
                         <div className={`hidden md:hidden lg:hidden xl:block bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
                             <div className="relative">
-                                <img src="/thailand.jpg" alt="Thailand" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`}/>
+                                <img src="/thailand.webp" alt="Thailand" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Southeast Asia
@@ -464,7 +464,7 @@ const Home = () => {
                                         <span className="text-gray-600 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹35,999</p>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹14,999</p>
                                 <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 3 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Island hopping</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>
@@ -496,7 +496,7 @@ const Home = () => {
                         {/* Kerala Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/kerala.jpg" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/kerala.webp" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     South Asia
@@ -510,7 +510,7 @@ const Home = () => {
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹24,999</p>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹8,999</p>
                                 <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Backwater cruises</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
@@ -527,7 +527,7 @@ const Home = () => {
                         {/* Maldives Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/maldives.jpg" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/maldives.webp" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Indian Ocean
@@ -541,7 +541,7 @@ const Home = () => {
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹22,000</p>
                                 <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Overwater villas</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
@@ -558,25 +558,25 @@ const Home = () => {
                         {/* Europe Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/europe.jpg" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/dubai.webp" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
-                                    Europe
+                                    Middle East
                                 </div>
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Europe</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Dubai</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.5 6.5H19l-5.5 4 2 6.5L10 14l-5.5 4 2-6.5L1 7.5h6.5z"/></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹47,999</p>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
                                 <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Historical monuments</li>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Wine tasting tours</li>
-                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Scenic train rides</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Burj Khalifa experience</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Desert safari tours</li>
+                                    <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Luxury shopping malls</li>
                                 </ul>
                                 <button 
                                     className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
@@ -589,7 +589,7 @@ const Home = () => {
                         {/* Thailand Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/thailand.jpg" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
+                                <img src="/thailand.webp" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                                     Southeast Asia
@@ -603,7 +603,7 @@ const Home = () => {
                                         <span className="text-gray-600 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹35,999</p>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹14,999</p>
                                 <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Island hopping</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>

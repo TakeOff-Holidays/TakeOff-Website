@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'Pethra';
   src: url('./assets/Pethra.otf') format('opentype');
+  font-display: swap;
 }
 
 .font-pethra {

@@ -87,7 +87,7 @@ const About = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(/about.jpg)'}}>
+            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(/about.webp)'}}>
                 <div className="absolute inset-0 bg-black/0 flex items-center justify-center px-4">
                     <div className={`absolute bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[60%] text-center transition-all duration-1000 ease-out ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
