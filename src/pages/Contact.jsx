@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import Application from './Application'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
+const Application = lazy(() => import('./Application'))
 
 const Contact = () => {
     const [typedText, setTypedText] = useState('');
@@ -90,7 +90,7 @@ const Contact = () => {
             </section>
 
             {/* Application Form */}
-            <Application />
+            <Suspense fallback={<div className="flex justify-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}><Application /></Suspense>
 
             {/* Contact Information */}
              <section className="py-5 sm:py-5 md:py-5 space-y-8 sm:space-y-5">

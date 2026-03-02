@@ -149,7 +149,7 @@ const About = () => {
                             imageVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                         }`}>
                             <div className="bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
-                                <img src="Welcome-to-Travel-Moments-Homepage.webp" alt="Airplane Wing" className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover" />
+                                <img src="Welcome-to-Travel-Moments-Homepage.webp" alt="Airplane Wing" className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
@@ -270,7 +270,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="/founder.jpg" alt="Founder of TakeOff Holidays" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
+                                <img src="/founder.jpg" alt="Founder of TakeOff Holidays" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
