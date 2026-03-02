@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import DOMPurify from 'dompurify'
 
 const Application = () => {
     const [formData, setFormData] = useState({
@@ -96,11 +97,11 @@ const Application = () => {
 
         try {
             // Sanitize inputs
-            const sanitizedName = formData.name.trim();
-            const sanitizedEmail = formData.email.trim();
-            const sanitizedPhone = formData.phone.trim();
-            const sanitizedMessage = formData.message.trim();
-            const sanitizedRemarks = formData.remarks.trim();
+            const sanitizedName = DOMPurify.sanitize(formData.name.trim());
+            const sanitizedEmail = DOMPurify.sanitize(formData.email.trim());
+            const sanitizedPhone = DOMPurify.sanitize(formData.phone.trim());
+            const sanitizedMessage = DOMPurify.sanitize(formData.message.trim());
+            const sanitizedRemarks = DOMPurify.sanitize(formData.remarks.trim());
 
             // Create WhatsApp message content
             const whatsappMessage = `*New Travel Application*
