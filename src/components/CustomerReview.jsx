@@ -92,19 +92,19 @@ const CustomerReview = () => {
             comment: "Good service. One of the best travel agency i can suggest, will get the response immediately .i am completely impressed with their professionalism and customer service, especially Shibin bro is extremely helpful. Highly recommend this agency to all."
         },
         {
-            initial: 'R',
+            initial: 'G',
             name: 'Gg Bb',
             rating: 5,
             comment: "Booked thailand package for 4 days. It was a great experience. No hidden charges. All rates were mentioned clearly. Shibin was available at anytime to clarify any questions.\nIn Thailand all travel was taken care as part of package. Hotel which was given was very nice.\n\nOverall a good reliable agency .thank you."
         },
         {
-            initial: 'E',
+            initial: 'T',
             name: 'the Don',
             rating: 5,
             comment: "My priority travel agency....Very knowledgeable team....Quick response, suitable recommendations and budgetary offers..  One stop for all my travel needs....Highly recommendable.....Well Done Take Off .... Keep it up."
         },
         {
-            initial: 'D',
+            initial: 'M',
             name: 'manu ghosh',
             rating: 5,
             comment: "Takeoff made my travel planning effortless and enjoyable. Highly knowledgeable and attentive, they tailored everything to my preferences perfectly. Highly recommend for a stress-free and memorable trip.\n\nThank you!"
