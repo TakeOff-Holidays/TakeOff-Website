@@ -229,7 +229,7 @@ const Contact = () => {
                                     <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg">
                                         <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414758398!2d76.267304514795!3d9.967375892915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5d0f88c5c5%3A0x0!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890&output=embed&z=18&layer=t&maptype=satellite"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414758398!2d76.267304514795!3d9.967375892915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5d0f88c5c5%3A0x0!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890&output=embed&z=18&layer=t"
                                                 width="100%"
                                                 height="100%"
                                                 style={{border: 0}}
@@ -237,7 +237,7 @@ const Contact = () => {
                                                 loading="lazy"
                                                 referrerPolicy="no-referrer-when-downgrade"
                                                 className="rounded-lg"
-                                                title="TakeOff Holidays Location - Kochi, Kerala (Satellite View)"
+                                                title="TakeOff Holidays Location - Kochi, Kerala"
                                             ></iframe>
                                         </div>
                                         <div className="mt-4 text-center">
