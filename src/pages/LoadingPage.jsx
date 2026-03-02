@@ -103,28 +103,32 @@ const LoadingPage = () => {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/50 to-transparent flex items-center justify-center">
-                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center gap-2 sm:gap-3">
-                  <img src="/logoimg.png" alt="Logo" className="h-12 w-auto sm:h-14 md:h-12" />
-                    <div className="flex flex-col leading-tight">
-                      <span 
-                        className="text-black text-sm sm:text-base md:text-lg font-bold"
-                         style={{ 
-                         fontFamily: "'Afacad', sans-serif",
-                         color: "#148dc4"
-                       }}
-                     >
-                      Takeoff Holidayz
-                    </span>
+<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/50 to-transparent flex items-center justify-center">
+  <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center gap-2 sm:gap-3">
+    
+    <img src="/logoimg.png" alt="Logo" className="h-12 w-auto sm:h-14 md:h-12" />
 
-                    <span 
-                      className="text-xs sm:text-sm font-medium"
-                      style={{ color: "#148dc4" }}
-                    >
-                      A Complete Travel Partner
-                    </span>
-                 </div>
-            </div>
+    <div className="flex flex-col leading-tight">
+      <span 
+        className="text-black text-sm sm:text-base md:text-lg font-bold"
+        style={{ 
+          fontFamily: "'Afacad', sans-serif",
+          color: "#148dc4"
+        }}
+      >
+        Takeoff Holidayz
+      </span>
+
+      <span 
+        className="text-xs sm:text-sm font-medium"
+        style={{ color: "#148dc4" }}
+      >
+        A Complete Travel Partner
+      </span>
+    </div>
+
+  </div>
+</div>
         </div>
     );
 };
