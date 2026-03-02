@@ -75,7 +75,7 @@ const InternationalPackages = [
         id: 7,
         title: "Malaysia Explorer Package",
         price: "₹18,000",
-        image: "/malaysia.jpg",
+        image: "/malaysia.webp",
         description: "Discover scenic bays, cultural towns, and breathtaking landscapes.",
         features: [
             "City & cultural tours",
@@ -87,7 +87,7 @@ const InternationalPackages = [
         id: 8,
         title: "Georgia Scenic Journey",
         price: "₹25,000",
-        image: "/georgia.jpg",
+        image: "/georgia.webp",
         description: "Unwind in crystal-clear waters, luxury water villas, and romantic island views.",
         features: [
             "Mountain sightseeing",
@@ -99,7 +99,7 @@ const InternationalPackages = [
         id: 9,
         title: "Kazakhstan Adventure Escape",
         price: "₹18,000",
-        image: "/kazakisthan.jpg",
+        image: "/kazakisthan.webp",
         description: "Explore the best of Europe with visits to Paris, Rome, and Barcelona.",
         features: [
             "Nature & city tours",
@@ -111,7 +111,7 @@ const InternationalPackages = [
         id: 10,
         title: "Nepal Himalayan Adventure",
         price: "₹15,999",
-        image: "/Nepalimg.jpg",
+        image: "/Nepalimg.webp",
         description: "Experience majestic Himalayan peaks, ancient temples, and vibrant Kathmandu culture.",
         features: [
             "Mountain trekking",
@@ -123,7 +123,7 @@ const InternationalPackages = [
         id: 11,
         title: "Bhutan Kingdom Journey",
         price: "₹22,999",
-        image: "/bhutanimg.jpg",
+        image: "/bhutanimg.webp",
         description: "Discover the Land of Thunder Dragon with monasteries, fortresses, and pristine landscapes.",
         features: [
             "Monastery visits",
@@ -135,7 +135,7 @@ const InternationalPackages = [
         id: 12,
         title: "China Ancient Wonders",
         price: "₹24,999",
-        image: "/chinaimg.jpg",
+        image: "/chinaimg.webp",
         description: "Explore the Great Wall, Forbidden City, and blend of ancient tradition with modern marvels.",
         features: [
             "Historical landmarks",
