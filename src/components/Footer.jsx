@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="mb-4">
               <img src="/logoimg.png" alt="Takeoff Holidayz" className="h-12 w-auto mx-auto" />
             </div>
-            <h3 className="text-xl font-bold mb-4 font-pethra">Takeoff Holidayz Pvt Ltd</h3>
+            <h3 className="text-xl font-bold mb-4 font-pethra">Takeoff Holidayz Pvt Ltd<sup>™</sup></h3>
             <p className="text-gray-400 mb-4" style={{fontFamily: "'Afacad', sans-serif"}}>
               Your trusted partner for unforgettable travel experiences around the world.
             </p>
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm" style={{fontFamily: "'Afacad', sans-serif"}}>
-              © 2024 Takeoff Holidayz Pvt Ltd. All rights reserved.
+              © 2024 Takeoff Holidayz Pvt Ltd<sup>™</sup>. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors" style={{fontFamily: "'Afacad', sans-serif"}}>
