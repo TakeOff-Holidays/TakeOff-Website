@@ -132,6 +132,8 @@ const Contact = () => {
                                                             KP VALLON ROAD<br />
                                                             KADAVANTHARA, KOCHI - 682020<br />
                                                             KERALA, INDIA
+                                                            <br />
+                                                            Ph : +91 812 902 3279
                                                         </p>
                                                     </div>
                                                     <div className="hover:bg-white hover:rounded-lg hover:p-4 hover:shadow-md transition-all duration-300 -m-4 p-4">
@@ -141,6 +143,8 @@ const Contact = () => {
                                                             MANGARAM, MUTTAR<br />
                                                             PANDALAM, PATHANAMTHITTA -689501<br />
                                                             KERALA, INDIA
+                                                            <br />
+                                                            Ph : +91 807 587 7726
                                                         </p>
                                                     </div>
                                                     <div className="hover:bg-white hover:rounded-lg hover:p-4 hover:shadow-md transition-all duration-300 -m-4 p-4">
@@ -150,6 +154,8 @@ const Contact = () => {
                                                             NIGHTINGALE AVENUE <br />
                                                             HARROW, MIDDLESEX<br />
                                                             UNITED KINGDOM , PO- HA1 3GJ
+                                                            <br />
+                                                            Ph : +44 7785 341907
                                                         </p>
                                                     </div>
                                                 </div>

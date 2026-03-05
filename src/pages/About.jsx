@@ -169,7 +169,7 @@ const About = () => {
                         }`}>
                             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-3 sm:mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>Our Promise</h2>
                             <p className="text-gray-600 mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl font-semibold" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                Luxury. Comfort. Reliability.
+                                Transparency. Comfort. Reliability.
                             </p>
                             <p className="text-gray-600 mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl" style={{fontFamily: "'Afacad', sans-serif"}}>
                                 We don't just plan trips — we craft timeless travel experiences.
