@@ -1,5 +1,5 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react'
-const Application = lazy(() => import('./Application'))
+import React, { useState, useEffect } from 'react'
+import Application from './Application'
 
 const Contact = () => {
     const [typedText, setTypedText] = useState('');
@@ -90,7 +90,7 @@ const Contact = () => {
             </section>
 
             {/* Application Form */}
-            <Suspense fallback={<div className="flex justify-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}><Application /></Suspense>
+            <Application />
 
             {/* Contact Information */}
              <section className="py-5 sm:py-5 md:py-5 space-y-8 sm:space-y-5">
@@ -229,7 +229,7 @@ const Contact = () => {
                                     <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg">
                                         <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414758398!2d76.267304514795!3d9.967375892915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5d0f88c5c5%3A0x0!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890&output=embed&z=18&layer=t"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414758398!2d76.267304514795!3d9.967375892915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5d0f88c5c5%3A0x0!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890&output=embed&z=18&layer=t&maptype=satellite"
                                                 width="100%"
                                                 height="100%"
                                                 style={{border: 0}}
@@ -237,7 +237,7 @@ const Contact = () => {
                                                 loading="lazy"
                                                 referrerPolicy="no-referrer-when-downgrade"
                                                 className="rounded-lg"
-                                                title="TakeOff Holidays Location - Kochi, Kerala"
+                                                title="TakeOff Holidays Location - Kochi, Kerala (Satellite View)"
                                             ></iframe>
                                         </div>
                                         <div className="mt-4 text-center">
