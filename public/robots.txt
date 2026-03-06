@@ -1,21 +1,22 @@
 User-agent: *
 Allow: /
 
-# Block access to admin areas if any
-Disallow: /admin/
-Disallow: /api/
-Disallow: /private/
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
 
-# Allow access to CSS, JS, and image files
-Allow: *.css
-Allow: *.js
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.svg
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
 
 # Sitemap location
 Sitemap: https://takeoffholidayz.com/sitemap.xml
 
-# Crawl delay (optional)
-Crawl-delay: 1
+# Block common non-content paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
