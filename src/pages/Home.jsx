@@ -275,7 +275,8 @@ const Home = () => {
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
-                            <p className="font-bold font-pethra text-xl sm:text-2xl text-center">TakeOff Holidayz - A Complete Travel partner</p>
+                            <p className="font-bold text-xl sm:text-2xl text-center" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</p>
+                            <p className="text-sm sm:text-base text-center mt-2" style={{fontFamily: "'Playfair Display', serif"}}>- A Complete Travel partner</p>
                         </div>
                     </div>
 
@@ -307,7 +308,10 @@ const Home = () => {
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 -translate-x-full'
                 }`}>
-                    <h1 className="font-pethra mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">TakeOff Holidayz - A Complete Travel partner</h1>
+                    <div className="text-center">
+                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
+                        <p className="text-sm sm:text-base mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
+                    </div>
                 </div>
 
                 {/* Bottom right glassmorphism box */}
