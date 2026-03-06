@@ -200,8 +200,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                         </div>
                         {/* Box 2 - 15+ Global Destinations Covered (from right) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-300 ${
@@ -209,8 +209,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                         </div>
                     </div>
                     <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48">
@@ -220,8 +220,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
                         </div>
                         {/* Box 4 - 19+ Years of Travel Excellence (from right) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-450 ${
@@ -229,8 +229,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                            <p className="text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
                         </div>
                     </div>
                 </div>
@@ -309,8 +309,8 @@ const Home = () => {
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
-                        <p className="text-sm sm:text-base mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
+                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>- A Complete Travel partner</p>
                     </div>
                 </div>
 
@@ -320,7 +320,7 @@ const Home = () => {
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 translate-x-full'
                 }`}>
-                    <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-base md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                    <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                     <div className="flex gap-3 md:gap-3 lg:gap-4 xl:gap-5">
                         <button 
                             className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
