@@ -1,7 +1,7 @@
 const InternationalPackages = [
     {
         id: 1,
-        title: "Dubai Luxury E",
+        title: "Dubai Luxury",
         price: "₹18,999",
         image: "/dubai.webp",
         description: "Experience luxury, skyscrapers, desert safaris, and world-class shopping.",

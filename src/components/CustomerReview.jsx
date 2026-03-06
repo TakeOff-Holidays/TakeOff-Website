@@ -62,6 +62,60 @@ const CustomerReview = () => {
 
     const reviews = [
         {
+            initial: 'K',
+            name: 'Kristina Bykovets',
+            rating: 5,
+            comment: "I have been referred to Takeoff Holidayz by a friend and Shibin helped me to organise hotels and commuting services. That was a pleasant trip, driver was very welcoming, helpful, responsive and always ready to bring you to the best spot in town and recommend smth even more better. The places I were staying were truly amazing and authentic- a real representation of Kerala. Highly recommend and will refer my friends.🤗"
+        },
+        {
+            initial: 'A',
+            name: 'Afzal N',
+            rating: 5,
+            comment: "The arrangement was nice.there were no delay as everything was perfect.and also it was worth as compared with direct contact with resort. Thankyou Take off holidays."
+        },
+        {
+            initial: 'S',
+            name: 'Sujaya K Raj',
+            rating: 5,
+            comment: "Suggested the service of The Takeoff to a friend of mine in the US to roam Kochi and surroundings.Their professionalism and courtesy were impressive throughout the entire process."
+        },
+        {
+            initial: 'N',
+            name: 'Navya James',
+            rating: 5,
+            comment: "I took flight ticket service from them and it was great. Out of 3 agencies that i contacted Takeoff Holidays were the most efficient and so i proceeded with them. They will respond to your queries as quickly as possible."
+        },
+        {
+            initial: 'V',
+            name: 'Dr Vishnu PS',
+            rating: 5,
+            comment: "Thanks for making the entire process of getting visa and booking air ticketa seamless. Kudos to Shibin for the prompt service !!"
+        },
+        {
+            initial: 'H',
+            name: 'Dr Haroon Pillay',
+            rating: 5,
+            comment: "Shibin is extremely helpful and gives personalised attention to your travel needs. Excellent service"
+        },
+        {
+            initial: 'V',
+            name: 'Vivek Pillai',
+            rating: 5,
+            comment: "Excellent customer support for ticket booking and visa incase of renewal prior to expiry of visa they are initiating the visa extension process. Also for holidays, resort / hotel booking good packages , Owner is customer friendly and give customized package. Can refer to friends / relatives as Takeoff team will ensure dedicated work"
+        },
+        {
+            initial: 'N',
+            name: 'Nithin Hegde',
+            rating: 5,
+            comment: "Very humble, Wonderful person and very helpful, when I was in airport, speak him around 1am in the midnight for my visa related issue he politely answered and solved my visa queries and finally reached my destination very calm and peaceful. Reliable person and trustworthy to assign him for visa and ticketing process, very very minimum charges he apply every time."
+        },
+        {
+            initial: 'S',
+            name: 'Shakee Ebrahim',
+            rating: 5,
+            comment: "Had a great travel experience. I would definitely recommend others to book through @takeoffholidayz for an amazing travel experience!"
+        },
+        {
             initial: 'B',
             name: 'Balasaheb Bhaga',
             rating: 5,
