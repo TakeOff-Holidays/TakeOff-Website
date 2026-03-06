@@ -276,7 +276,7 @@ const Home = () => {
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="font-bold text-xl sm:text-2xl text-center" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</p>
-                            <p className="text-sm sm:text-base text-center mt-2" style={{fontFamily: "'Playfair Display', serif"}}>- A Complete Travel partner</p>
+                            <p className="text-sm sm:text-base text-center mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
                         </div>
                     </div>
 
