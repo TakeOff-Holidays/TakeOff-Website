@@ -116,7 +116,7 @@ const Application = () => {
 *Submitted on:* ${new Date().toLocaleString()}`;
 
             // Create WhatsApp URL
-            const whatsappUrl = `https://wa.me/918921318291?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappUrl = `https://wa.me/918129023279?text=${encodeURIComponent(whatsappMessage)}`;
             window.location.href = whatsappUrl;
 
             setSubmitStatus('success');
@@ -326,7 +326,7 @@ const Application = () => {
                                 {submitStatus === 'success' && (
                                     <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
                                         <p className="text-green-700 text-center" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                            ✓ Application submitted successfully! Redirecting to WhatsApp...
+                                            ✓ Application will be Redirecting to WhatsApp...
                                         </p>
                                     </div>
                                 )}

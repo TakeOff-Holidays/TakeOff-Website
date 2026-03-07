@@ -190,7 +190,15 @@ const Packages = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button className="bg-blue-600 text-white px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-base hover:bg-blue-700 transition-all duration-300 whitespace-nowrap transform hover:scale-105 hover:shadow-lg group-hover:bg-blue-700" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                    <button 
+                                        className="bg-blue-600 text-white px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-base hover:bg-blue-700 transition-all duration-300 whitespace-nowrap transform hover:scale-105 hover:shadow-lg group-hover:bg-blue-700" 
+                                        style={{fontFamily: "'Afacad', sans-serif"}}
+                                        onClick={() => {
+                                            if (typeof window !== 'undefined') {
+                                                window.location.href = '/application';
+                                            }
+                                        }}
+                                    >
                                         Book Now
                                     </button>
                                 </div>

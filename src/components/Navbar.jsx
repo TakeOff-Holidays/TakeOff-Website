@@ -8,8 +8,13 @@ const Navbar = () => {
       <div className="container mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
           {/* Left - Logo in glassmorphism box */}
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center justify-center">
-            <img src="/logoimg.png" alt="Logo" className="h-8 w-auto sm:h-14 md:h-12" />
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
+               onClick={() => {
+                 if (typeof window !== 'undefined') {
+                   window.location.href = '/home';
+                 }
+               }}>
+            <img src="/logoimg.png" alt="TakeOff Holidayz Logo" className="h-8 w-auto sm:h-14 md:h-12" />
           </div>
 
           {/* Center - Desktop Navigation Links in glassmorphism box */}

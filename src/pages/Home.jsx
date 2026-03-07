@@ -274,14 +274,14 @@ const Home = () => {
                     <div className={`absolute top-[230px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
-                            <p className="font-bold text-xl sm:text-2xl text-center" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</p>
+                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-80 sm:w-96 max-w-[95vw]">
+                            <p className="font-bold text-xl sm:text-2xl text-center" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz Pvt Ltd</p>
                             <p className="text-sm sm:text-base text-center mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[70vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
+                    <div className={`absolute top-[65vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.7s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
@@ -303,13 +303,13 @@ const Home = () => {
                 </div>
 
                 {/* Bottom left glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-600 ${
+                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
+                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz Pvt Ltd</h1>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
                     </div>
                 </div>
